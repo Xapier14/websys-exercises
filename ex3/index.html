@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>My Weblog</title>
+    <style>
+      a,
+      a:link,
+      a:visited,
+      a:hover {
+        color: white;
+      }
+    </style>
+    <script src="./jquery-3.6.1.min.js"></script>
+  </head>
+  <body style="margin: 0; padding: 0; color: white">
+    <header style="padding: 0.5rem 1rem; background-color: darkorange">
+      <h1>My Weblog</h1>
+    </header>
+    <div style="display: flex; flex-direction: row">
+      <div
+        style="
+          padding: 0.5rem;
+          background-color: darkslateblue;
+          width: 256px;
+        "
+      >
+        <div style="display: flex; flex-direction: row; margin-bottom: 1rem">
+          <input type="text" placeholder="search" />
+          <input type="button" value="Search" />
+        </div>
+        <a href="#">Contributors</a>
+      </div>
+      <div style="padding: 1rem; background-color: darkturquoise; max-width:70vw;">
+        <h1 class="content-heading">Posts</h1>
+        <div class="post">
+          <a href="#" onclick="onImageClick();">
+            <img
+              id="cat-image"
+              src="https://i.insider.com/5aa10ca0d877e618008b4678"
+              style="width: 300px; aspect-ratio: 1/1; border-radius: 20px"
+            />
+          </a>
+          <h2 style="color: slategray; margin-bottom: 0.1rem">Hello, World!</h2>
+          <span class="post-subtitle">
+            by
+            <a href="#" style="color: white">Pek</a>
+            on April 27, 2019
+          </span>
+          <p class="post-content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit illo
+            fugiat perspiciatis ea accusamus repudiandae iusto fuga eos, error
+            numquam hic deleniti? Officia molestias omnis tempora consectetur
+            quibusdam ratione quae sequi perferendis illo in. Quo voluptas,
+            tenetur sint odio cumque eaque ducimus minima nihil possimus vel
+            facere. Veniam, voluptatem, provident officia at dolore quidem
+            explicabo vel error fugiat laudantium, quia vero atque natus nulla
+            sequi corporis unde doloribus nisi nesciunt fuga aspernatur.
+            Possimus, eum obcaecati nostrum placeat officiis tempora minus
+            blanditiis assumenda voluptates eaque, consectetur at. Sequi qui
+            ipsum atque at ratione voluptatum ea magnam ab modi. Deleniti,
+            tenetur dolorem.
+          </p>
+          <a class="post-more" href="#" onclick="onReadMore()">Read more...</a>
+        </div>
+      </div>
+      <div
+        id="right-column"
+        style="
+          padding: 0.5rem;
+          background-color: darkslateblue;
+          width: 256px;
+        "
+      >
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+          style="width: 64px; aspect-ratio: 1/1; border-radius: 50%"
+        />
+        <span>Pek Pek is a lazy programmer.</span>
+        <ol>
+          <li>Article 1</li>
+          <li>Article 2</li>
+          <li>Article 3</li>
+        </ol>
+      </div>
+    </div>
+    <footer style="padding: 0.5rem 1rem; background-color: darkorange">
+      <span style="margin-top: 0.5rem">Copyright 2019</span>
+    </footer>
+    <script>
+      function onImageClick() {
+        $("#cat-image").css("width", "100px");
+      }
+      function onReadMore() {
+        $("#right-column").remove();
+      }
+    </script>
+  </body>
+</html>
